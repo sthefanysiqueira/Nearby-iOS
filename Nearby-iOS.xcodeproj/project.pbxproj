@@ -11,7 +11,10 @@
 		8A9831992D088E8E0011E9C2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9831982D088E8E0011E9C2 /* SceneDelegate.swift */; };
 		8A98319B2D088E8E0011E9C2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A98319A2D088E8E0011E9C2 /* ViewController.swift */; };
 		8A9831A02D088E8F0011E9C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A98319F2D088E8F0011E9C2 /* Assets.xcassets */; };
-		8A9831AB2D088F410011E9C2 /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9831AA2D088F410011E9C2 /* FlowCoordinator.swift */; };
+		8A9831AB2D088F410011E9C2 /* NearbyFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9831AA2D088F410011E9C2 /* NearbyFlowController.swift */; };
+		8A9831B12D09C6CA0011E9C2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9831B02D09C6CA0011E9C2 /* Colors.swift */; };
+		8A9831B62D0A07210011E9C2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9831B52D0A07210011E9C2 /* SplashViewController.swift */; };
+		8AC42AA32D0DDBED00AB031F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC42AA22D0DDBED00AB031F /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,7 +24,10 @@
 		8A98319A2D088E8E0011E9C2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A98319F2D088E8F0011E9C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A9831A42D088E8F0011E9C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A9831AA2D088F410011E9C2 /* FlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		8A9831AA2D088F410011E9C2 /* NearbyFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyFlowController.swift; sourceTree = "<group>"; };
+		8A9831B02D09C6CA0011E9C2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8A9831B52D0A07210011E9C2 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		8AC42AA22D0DDBED00AB031F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,73 @@
 		8A9831952D088E8E0011E9C2 /* Nearby-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				8A9831AD2D09C6620011E9C2 /* Sources */,
+				8A9831AC2D09C6560011E9C2 /* Resources */,
 				8A9831962D088E8E0011E9C2 /* AppDelegate.swift */,
 				8A9831982D088E8E0011E9C2 /* SceneDelegate.swift */,
 				8A98319A2D088E8E0011E9C2 /* ViewController.swift */,
-				8A98319F2D088E8F0011E9C2 /* Assets.xcassets */,
 				8A9831A42D088E8F0011E9C2 /* Info.plist */,
-				8A9831AA2D088F410011E9C2 /* FlowCoordinator.swift */,
 			);
 			path = "Nearby-iOS";
+			sourceTree = "<group>";
+		};
+		8A9831AC2D09C6560011E9C2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A98319F2D088E8F0011E9C2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8A9831AD2D09C6620011E9C2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831AF2D09C6760011E9C2 /* Features */,
+				8A9831AE2D09C6700011E9C2 /* Constants */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8A9831AE2D09C6700011E9C2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831B02D09C6CA0011E9C2 /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		8A9831AF2D09C6760011E9C2 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831B32D0A07020011E9C2 /* Scenes */,
+				8A9831B22D0A03EC0011E9C2 /* Coordinator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8A9831B22D0A03EC0011E9C2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831AA2D088F410011E9C2 /* NearbyFlowController.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		8A9831B32D0A07020011E9C2 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831B42D0A07070011E9C2 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8A9831B42D0A07070011E9C2 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8A9831B52D0A07210011E9C2 /* SplashViewController.swift */,
+				8AC42AA22D0DDBED00AB031F /* SplashView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,10 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A9831AB2D088F410011E9C2 /* FlowCoordinator.swift in Sources */,
+				8A9831AB2D088F410011E9C2 /* NearbyFlowController.swift in Sources */,
+				8A9831B12D09C6CA0011E9C2 /* Colors.swift in Sources */,
 				8A98319B2D088E8E0011E9C2 /* ViewController.swift in Sources */,
+				8A9831B62D0A07210011E9C2 /* SplashViewController.swift in Sources */,
 				8A9831972D088E8E0011E9C2 /* AppDelegate.swift in Sources */,
 				8A9831992D088E8E0011E9C2 /* SceneDelegate.swift in Sources */,
+				8AC42AA32D0DDBED00AB031F /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

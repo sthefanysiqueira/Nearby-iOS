@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 // Essa classe serve para gerenciar o fluxo de telas do aplicativo
-class FlowCoordinator {
+class NearbyFlowController {
     
     // Propriedade privada que armazena o UINavigationController, que cria uma "pilha" de telas e é responsável por gerenciar a navegação entre as telas (view controllers).
     private var navigationController: UINavigationController?
@@ -21,9 +21,9 @@ class FlowCoordinator {
     
     // Inicia a navegação de telas
     func start() -> UINavigationController? {
+        let contentView = SplashView()
         // Cria a tela inicial (view controller) e configura sua aparência.
-        let startViewController = UIViewController()
-        startViewController.view.backgroundColor = .red
+        let startViewController = SplashViewController(contentView: contentView)
         
         // Inicializa o UINavigationController com a tela inicial (rootViewController).
         self.navigationController = UINavigationController(rootViewController: startViewController)

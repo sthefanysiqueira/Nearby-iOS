@@ -10,15 +10,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var flowController: FlowCoordinator? // Cria uma propriedade para o FlowCoordinator, que gerencia o fluxo de navegação no aplicativo.
+    var flowController: NearbyFlowController? // Cria uma propriedade para o NearbyFlowController, que gerencia o fluxo de navegação no aplicativo.
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return } // Garante que a cena fornecida seja do tipo UIWindowScene.
         let window = UIWindow(windowScene: windowScene) // Cria uma nova instância de UIWindow para a cena fornecida.
 
-        self.flowController = FlowCoordinator() // Inicializa o FlowCoordinator, que gerenciará o fluxo de telas.
-        let rootViewController = flowController?.start() // Obtém o UINavigationController inicial configurado pelo FlowCoordinator.
+        self.flowController = NearbyFlowController() // Inicializa o NearbyFlowController, que gerenciará o fluxo de telas.
+        let rootViewController = flowController?.start() // Obtém o UINavigationController inicial configurado pelo NearbyFlowController.
         
         window.rootViewController = rootViewController // Define o rootViewController da janela como o UINavigationController retornado.
         self.window = window // Armazena a referência da janela criada na propriedade window da classe.
