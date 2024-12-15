@@ -23,11 +23,21 @@ class NearbyFlowController {
     func start() -> UINavigationController? {
         let contentView = SplashView()
         // Cria a tela inicial (view controller) e configura sua aparência.
-        let startViewController = SplashViewController(contentView: contentView)
+        let startViewController = SplashViewController(contentView: contentView, delegate: self)
         
         // Inicializa o UINavigationController com a tela inicial (rootViewController).
         self.navigationController = UINavigationController(rootViewController: startViewController)
         // Retorna o UINavigationController configurado, que será usado para gerenciar a navegação.
         return navigationController
     }
+}
+
+extension NearbyFlowController: SplashFlowDelegate {
+    func decideNavigationFlow() {
+        let contentView = WelcomeView()
+        let WelcomeViewController = WelcomeViewController(contentView: contentView)
+        navigationController?.pushViewController(WelcomeViewController, animated: true)
+    }
+    
+    
 }
